@@ -1,0 +1,22 @@
+<UserControl
+    x:Class="Authi.App.WinUI.UI.CopyNotification"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l10n="using:Authi.App.Logic.Localization">
+    <Border
+        x:Name="Border"
+        Margin="0,0,0,28"
+        Padding="16,8"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Bottom"
+        Background="{ThemeResource ControlSolidFillColorDefaultBrush}"
+        BorderBrush="{ThemeResource SurfaceStrokeColorDefaultBrush}"
+        BorderThickness="1"
+        CornerRadius="{StaticResource ControlCornerRadius}"
+        Opacity="1">
+        <Border.Shadow>
+            <ThemeShadow />
+        </Border.Shadow>
+        <TextBlock Style="{ThemeResource BodyTextBlockStyle}" Text="{x:Bind l10n:Generic.Copied}" />
+    </Border>
+</UserControl>

@@ -1,0 +1,70 @@
+<ContentView
+    x:Class="Authi.App.Maui.Controls.DialogPresenter"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid>
+        <Border
+            x:Name="BackgroundBorder"
+            BackgroundColor="{DynamicResource Semitransparent1}"
+            Stroke="Transparent"
+            StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBackgroundTapped" />
+            </Border.GestureRecognizers>
+        </Border>
+        <Grid
+            x:Name="DialogContainer"
+            Margin="20"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Border
+                BackgroundColor="{DynamicResource Surface}"
+                Stroke="Transparent"
+                StrokeThickness="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="32" />
+                </Border.StrokeShape>
+            </Border>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label
+                    x:Name="TitleLabel"
+                    Grid.Row="0"
+                    Margin="32,32,32,8"
+                    FontAttributes="None"
+                    Style="{StaticResource TitleLabelStyle}"
+                    TextColor="{DynamicResource OnSurface}" />
+                <Label
+                    x:Name="MessageLabel"
+                    Grid.Row="1"
+                    Margin="32,8"
+                    Style="{StaticResource BodyLabelStyle}"
+                    TextColor="{DynamicResource OnSurfaceVariant}" />
+                <Grid
+                    x:Name="ContentFrameGrid"
+                    Grid.Row="2"
+                    Margin="32,32,32,0" />
+                <HorizontalStackLayout
+                    Grid.Row="3"
+                    Margin="8"
+                    HorizontalOptions="End">
+                    <Button
+                        x:Name="CancelButton"
+                        Clicked="CancelClicked"
+                        Style="{StaticResource DialogButtonButtonStyle}"
+                        Text="Enough" />
+                    <Button
+                        x:Name="PrimaryButton"
+                        Clicked="PrimaryClicked"
+                        Style="{StaticResource DialogButtonButtonStyle}"
+                        Text="Enough" />
+                </HorizontalStackLayout>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentView>

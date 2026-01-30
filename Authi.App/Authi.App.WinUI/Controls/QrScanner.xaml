@@ -1,0 +1,14 @@
+<UserControl
+    x:Class="Authi.App.WinUI.Controls.QrScanner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border Background="Black" CornerRadius="8">
+        <MediaPlayerElement
+            x:Name="CameraView"
+            MinWidth="200"
+            MinHeight="200"
+            MaxWidth="360"
+            MaxHeight="360"
+            AutoPlay="True" />
+    </Border>
+</UserControl>

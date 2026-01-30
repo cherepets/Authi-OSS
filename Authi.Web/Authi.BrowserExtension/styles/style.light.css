@@ -1,0 +1,21 @@
+﻿:root {
+    /* Background */
+    --background: #f3f3f3;
+    --background1: #fbfbfb;
+    --background2: #fefefe;
+    --background3: #e5e5e5;
+    --background-acrylic: #e5e5e580;
+    /* Foreground */
+    --foreground: #000000;
+    --foreground1: #333333;
+    --foreground2: #666666;
+    --foreground3: #333333;
+    /* Accent */
+    --accent: #8046db;
+    --accent1: #8856d8;
+    --accent2: #764cbf;
+    --accent3: #6341a3;
+    --accent-acrylic: #e8dcf9;
+    /* Icon filter */
+    --icon-filter: invert(0%);
+}

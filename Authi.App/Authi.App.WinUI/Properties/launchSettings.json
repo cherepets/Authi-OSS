@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Authi.App.WinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Authi.App.WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+﻿<ResourceDictionary
+    x:Class="Authi.App.Maui.Styles.MaterialIcons"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <x:String x:Key="AddIcon"></x:String>
+    <x:String x:Key="BackIcon"></x:String>
+    <x:String x:Key="CheckmarkIcon"></x:String>
+    <x:String x:Key="CloseIcon"></x:String>
+    <x:String x:Key="CopyIcon"></x:String>
+    <x:String x:Key="DeleteIcon"></x:String>
+    <x:String x:Key="EditIcon"></x:String>
+    <x:String x:Key="ErrorIcon"></x:String>
+    <x:String x:Key="FlashIcon"></x:String>
+    <x:String x:Key="Options"></x:String>
+    <x:String x:Key="ProgressIcon"></x:String>
+    <x:String x:Key="SettingsIcon"></x:String>
+    <x:String x:Key="StatusIcon"></x:String>
+    <x:String x:Key="SwitchCameraIcon"></x:String>
+    <x:String x:Key="QrCode"></x:String>
+</ResourceDictionary>

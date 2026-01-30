@@ -1,0 +1,22 @@
+﻿<ResourceDictionary
+    x:Class="Authi.App.Maui.Styles.CustomColors"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="Transparent">#007f7f7f</Color>
+    <Color x:Key="Semitransparent">#207f7f7f</Color>
+    <Color x:Key="Semitransparent1">#407f7f7f</Color>
+    <Color x:Key="Semitransparent2">#607f7f7f</Color>
+    <Color x:Key="Semitransparent3">#807f7f7f</Color>
+
+    <Color x:Key="ColorNeutralDark">#9a9a9a</Color>
+    <Color x:Key="ColorNeutralLight">#868686</Color>
+    <Color x:Key="ColorOfflineDark">#905250</Color>
+    <Color x:Key="ColorOfflineLight">#442726</Color>
+    <Color x:Key="ColorCautionDark">#fce100</Color>
+    <Color x:Key="ColorCautionLight">#9d5d00</Color>
+    <Color x:Key="ColorSuccessDark">#6ccb5f</Color>
+    <Color x:Key="ColorSuccessLight">#0f7b0f</Color>
+    <Color x:Key="ColorCriticalDark">#ff99a4</Color>
+    <Color x:Key="ColorCriticalLight">#c42b1c</Color>
+</ResourceDictionary>

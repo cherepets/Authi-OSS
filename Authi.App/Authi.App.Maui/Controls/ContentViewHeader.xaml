@@ -1,0 +1,42 @@
+<ContentView
+    x:Class="Authi.App.Maui.Controls.ContentViewHeader"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="using:Authi.App.Maui.Controls"
+    x:DataType="local:ContentViewHeader">
+    <Grid Padding="0,0,0,12">
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer />
+        </Grid.GestureRecognizers>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Button
+            x:Name="BackButton"
+            Margin="4,0,-20,0"
+            Clicked="OnCloseClicked"
+            HorizontalOptions="End"
+            Style="{StaticResource RoundIconButtonStyle}"
+            Text="{StaticResource BackIcon}"
+            VerticalOptions="Center" />
+        <Label
+            Grid.Column="1"
+            Margin="24,0"
+            Padding="0,1,0,0"
+            LineBreakMode="TailTruncation"
+            Style="{StaticResource TitleLabelStyle}"
+            Text="{Binding Title, Mode=OneWay}"
+            VerticalOptions="Center" />
+        <Button
+            x:Name="CloseButton"
+            Grid.Column="2"
+            Margin="-20,0,4,0"
+            Clicked="OnCloseClicked"
+            HorizontalOptions="End"
+            Style="{StaticResource RoundIconButtonStyle}"
+            Text="{StaticResource CloseIcon}"
+            VerticalOptions="Center" />
+    </Grid>
+</ContentView>

@@ -1,0 +1,33 @@
+﻿using LiteDB;
+using System;
+
+namespace Authi.App.Logic.Data
+{
+    public class Credential
+    {
+        [BsonId]
+        public ObjectId? LocalId { get; set; }
+        public Guid? CloudId { get; set; }
+        public string? Title { get; set; }
+        public string? Secret { get; set; }
+        public long? Timestamp { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is Credential credential)
+            {
+                // Do not check LocalId as it's optional
+                if (CloudId != credential.CloudId) return false;
+                if (Title != credential.Title) return false;
+                if (Secret != credential.Secret) return false;
+                if (Timestamp != credential.Timestamp) return false;
+                return true;
+            }
+            return false;
+        }
+
+        public override int GetHashCode() =>
+            (LocalId?.GetHashCode() ?? 0) +
+            (CloudId?.GetHashCode() ?? 0);
+    }
+}

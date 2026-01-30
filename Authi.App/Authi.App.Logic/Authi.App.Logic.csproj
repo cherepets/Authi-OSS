@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="Authi.App.Test" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="LiteDB" Version="5.0.21" />
+		<PackageReference Include="Otp.NET" Version="1.4.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Authi.Common\Authi.Common.Client\Authi.Common.Client.csproj" />
+		<ProjectReference Include="..\..\Authi.Common\Authi.Common.Dto\Authi.Common.Dto.csproj" />
+		<ProjectReference Include="..\..\Authi.Common\Authi.Common\Authi.Common.csproj" />
+	</ItemGroup>
+
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<Exec Command="dotnet run --project $(SolutionDir)Tools\Authi.Localizer\Authi.Localizer.csproj $(SolutionDir)Authi.Web\Authi.BrowserExtension\localization\en.json $(ProjectDir)Localization.cs" />
+	</Target>
+
+</Project>

@@ -1,0 +1,43 @@
+<ContentView
+    x:Class="Authi.App.Maui.UI.MenuBarView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Authi.App.Maui.Controls"
+    xmlns:local="using:Authi.App.Maui.UI"
+    xmlns:viewModels="clr-namespace:Authi.App.Logic.ViewModels;assembly=Authi.App.Logic"
+    x:DataType="viewModels:IMenuBarViewModel"
+    Loaded="OnLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout
+            Margin="28,0,0,0"
+            HorizontalOptions="Start"
+            Spacing="12"
+            VerticalOptions="Center">
+            <Label
+                Style="{StaticResource StateIconLabelStyle}"
+                Text="{StaticResource StatusIcon}"
+                TextColor="{Binding SyncViewModel.Status, Converter={StaticResource SyncStatusToColor}, Mode=OneWay}" />
+            <Label
+                Style="{StaticResource CaptionLabelStyle}"
+                Text="{Binding SyncViewModel.Status, Converter={StaticResource SyncStatusToTitle}}"
+                VerticalOptions="Center" />
+        </HorizontalStackLayout>
+        <Button
+            x:Name="SettingsButton"
+            Clicked="OnSettingsClicked"
+            HorizontalOptions="End"
+            Style="{StaticResource IconButtonStyle}"
+            Text="{StaticResource SettingsIcon}" />
+        <controls:ProgressBar
+            x:Name="ProgressBar"
+            Grid.Row="1"
+            HeightRequest="8"
+            HorizontalOptions="Fill"
+            Opacity="0"
+            VerticalOptions="End" />
+    </Grid>
+</ContentView>

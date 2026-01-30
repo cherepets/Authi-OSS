@@ -1,0 +1,40 @@
+<ContentView
+    x:Class="Authi.App.Maui.Controls.QrScanner"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid ColumnSpacing="16" RowSpacing="16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="44" />
+        </Grid.RowDefinitions>
+        <Border
+            x:Name="CameraPlaceholder"
+            Grid.ColumnSpan="2"
+            BackgroundColor="Black"
+            MaximumHeightRequest="360"
+            MaximumWidthRequest="360"
+            MinimumHeightRequest="200"
+            MinimumWidthRequest="200"
+            StrokeThickness="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="16" />
+            </Border.StrokeShape>
+        </Border>
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            Clicked="OnFlash"
+            FontFamily="IconFont"
+            Text="{StaticResource FlashIcon}" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            Clicked="OnSwitchCamera"
+            FontFamily="IconFont"
+            Text="{StaticResource SwitchCameraIcon}" />
+    </Grid>
+</ContentView>

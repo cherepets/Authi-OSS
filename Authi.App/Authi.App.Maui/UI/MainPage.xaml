@@ -1,0 +1,42 @@
+﻿<ContentPage
+    x:Class="Authi.App.Maui.UI.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Authi.App.Maui.Controls"
+    xmlns:l10n="clr-namespace:Authi.App.Logic.Localization;assembly=Authi.App.Logic"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:ui="clr-namespace:Authi.App.Maui.UI"
+    xmlns:viewModels="clr-namespace:Authi.App.Logic.ViewModels;assembly=Authi.App.Logic"
+    Background="{DynamicResource SurfaceBrush}"
+    Loaded="OnLoaded"
+    Opacity="0"
+    Shell.NavBarIsVisible="False"
+    SizeChanged="OnSizeChanged">
+    <Grid>
+        <Grid x:Name="Root">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="MainGridFirstColumn" />
+                <ColumnDefinition x:Name="MainGridSecondColumn" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <ui:MenuBarView
+                x:Name="MenuBar"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start" />
+            <ui:CredentialsCollectionView x:Name="CredentialsCollection" Grid.Row="1" />
+            <Border
+                x:Name="ContentFrame"
+                Grid.RowSpan="2"
+                StrokeThickness="0">
+                <Grid x:Name="ContentFrameGrid" />
+            </Border>
+        </Grid>
+        <controls:DialogPresenter
+            x:Name="DialogPresenter"
+            IsPresentingChanged="OnDialogIsPresentingChanged"
+            IsVisible="False" />
+    </Grid>
+</ContentPage>

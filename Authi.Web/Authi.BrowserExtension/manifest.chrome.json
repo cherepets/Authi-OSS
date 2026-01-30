@@ -1,0 +1,32 @@
+﻿{
+  "id": "authi@cherepets.me",
+  "name": "Authi",
+  "version": "1.0.0.7",
+  "manifest_version": 3,
+  "description": "Authi is a modern 2FA app that generates TOTP codes and syncs them across your devices through the cloud – no accounts required",
+  "icons": {
+    "16": "icons/icon16x16.png",
+    "32": "icons/icon32x32.png",
+    "48": "icons/icon48x48.png",
+    "128": "icons/icon128x128.png"
+  },
+  "permissions": [
+    "clipboardRead"
+  ],
+  "action": {
+    "default_icon": "icons/icon128x128.png",
+    "default_popup": "index.html"
+  },
+  "background": { "service_worker": "background.js" },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "authi@cherepets.me",
+      "data_collection_permissions": {
+        "required": [ "none" ]
+      }
+    }
+  }
+}

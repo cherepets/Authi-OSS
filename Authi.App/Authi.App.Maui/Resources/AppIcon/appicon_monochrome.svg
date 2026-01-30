@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="707"
+   height="982"
+   viewBox="0 0 707 982"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="appicon_monochrome.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.65784114"
+     inkscape:cx="354.18885"
+     inkscape:cy="491"
+     inkscape:window-width="1440"
+     inkscape:window-height="890"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="g1"
+     transform="matrix(0.45,0,0,0.45,194.425,270.05)">
+    <path
+       d="m 231,35 v 188 c 0,19.333 15.667,35 35,35 h 175 c 19.333,0 35,-15.667 35,-35 V 35 C 476,15.6674 460.333,0 441,0 H 266 C 246.667,0 231,15.6674 231,35 Z M 70,60 h 121 v 163 q 0,31.068 21.966,53.034 Q 234.932,298 266,298 h 175 q 31.068,0 53.034,-21.966 Q 516,254.068 516,223 V 60 h 121 c 38.665,0 70,31.3348 70,70 v 782 c 0,38.665 -31.335,70 -70,70 H 70 C 31.3348,982 0,950.665 0,912 V 130 C 0,91.3348 31.3348,60 70,60 Z m 283,19 c -27.614,0 -50,22.386 -50,50 0,27.614 22.386,50 50,50 27.614,0 50,-22.386 50,-50 0,-27.614 -22.386,-50 -50,-50 z M 246,430.5 C 246,372.234 293.906,325 353,325 412.094,325 460,372.234 460,430.5 460,488.766 412.094,536 353,536 293.906,536 246,488.766 246,430.5 Z m 293.404,373.925 c 14.442,-11.553 5.602,-54.788 -3.688,-85.884 C 500.479,620.498 435.487,591.147 353.001,590.43 c -83.828,-1.005 -147.031,31.188 -180.98,121.106 -11.377,31.409 -17.581,75.601 -4.433,86.934 41.95,32.592 338.3,29.413 371.816,5.955 z"
+       fill="#ffffff"
+       fill-rule="evenodd"
+       id="path1" />
+  </g>
+</svg>

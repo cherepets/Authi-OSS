@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="731"
+   height="1002"
+   viewBox="0 0 731 1002"
+   fill="none"
+   version="1.1"
+   id="svg20"
+   sodipodi:docname="appicon_colored.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview20"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1716567"
+     inkscape:cx="365.29472"
+     inkscape:cy="500.57325"
+     inkscape:window-width="3584"
+     inkscape:window-height="1892"
+     inkscape:window-x="3572"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g20" />
+  <defs
+     id="defs15">
+    <radialGradient
+       id="gradient_1"
+       gradientUnits="userSpaceOnUse"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientTransform="matrix(123,993,-680.322,84.27,353,0)">
+      <stop
+         offset="0"
+         stop-color="#8046DB"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#663AAD"
+         id="stop2" />
+    </radialGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       x="-0.013578501"
+       y="-0.010412148"
+       width="1.027157"
+       height="1.0208243"
+       id="filter_2">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix_1"
+         id="feFlood2" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
+         in="SourceAlpha"
+         id="feColorMatrix2" />
+      <feOffset
+         dx="0"
+         dy="0"
+         id="feOffset2" />
+      <feGaussianBlur
+         stdDeviation="4"
+         id="feGaussianBlur2" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0"
+         id="feColorMatrix3" />
+      <feBlend
+         mode="normal"
+         in2="BackgroundImageFix_1"
+         result="Shadow_2"
+         id="feBlend3" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="Shadow_2"
+         result="Shape_3"
+         id="feBlend4" />
+    </filter>
+    <radialGradient
+       id="gradient_3"
+       gradientUnits="userSpaceOnUse"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientTransform="matrix(42.624,277.868,-234.192,35.924,122.327,0)">
+      <stop
+         offset="0"
+         stop-color="#6539AB"
+         id="stop4" />
+      <stop
+         offset="1"
+         stop-color="#4D2E81"
+         id="stop5" />
+    </radialGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       x="-0.039183673"
+       y="-0.037209302"
+       width="1.0865306"
+       height="1.0899225"
+       id="filter_4">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix_1"
+         id="feFlood5" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
+         in="SourceAlpha"
+         id="feColorMatrix5" />
+      <feOffset
+         dx="2"
+         dy="4"
+         id="feOffset5" />
+      <feGaussianBlur
+         stdDeviation="4"
+         id="feGaussianBlur5" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0"
+         id="feColorMatrix6" />
+      <feBlend
+         mode="normal"
+         in2="BackgroundImageFix_1"
+         result="Shadow_2"
+         id="feBlend6" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="Shadow_2"
+         result="Shape_3"
+         id="feBlend7" />
+    </filter>
+    <radialGradient
+       id="gradient_5"
+       gradientUnits="userSpaceOnUse"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientTransform="matrix(32.488,98.07,-82.266,27.252,37,0)">
+      <stop
+         offset="0.034"
+         stop-color="#F0D7FF"
+         id="stop7" />
+      <stop
+         offset="1"
+         stop-color="#CEACFF"
+         id="stop8" />
+    </radialGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       x="-0.096"
+       y="-0.096"
+       width="1.212"
+       height="1.232"
+       id="filter_6">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix_1"
+         id="feFlood8" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
+         in="SourceAlpha"
+         id="feColorMatrix8" />
+      <feOffset
+         dx="2"
+         dy="4"
+         id="feOffset8" />
+      <feGaussianBlur
+         stdDeviation="4"
+         id="feGaussianBlur8" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0"
+         id="feColorMatrix9" />
+      <feBlend
+         mode="normal"
+         in2="BackgroundImageFix_1"
+         result="Shadow_2"
+         id="feBlend9" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="Shadow_2"
+         result="Shape_3"
+         id="feBlend10" />
+    </filter>
+    <radialGradient
+       id="gradient_7"
+       gradientUnits="userSpaceOnUse"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientTransform="matrix(46.468 204.57 -177.36 40.288 102.235 2.358)">
+      <stop
+         offset="0"
+         stop-color="#F0D7FF"
+         id="stop10" />
+      <stop
+         offset="1"
+         stop-color="#CEACFF"
+         id="stop11" />
+    </radialGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       x="-0.089719626"
+       y="-0.090995261"
+       width="1.1981308"
+       height="1.2199052"
+       id="filter_8">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix_1"
+         id="feFlood11" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
+         in="SourceAlpha"
+         id="feColorMatrix11" />
+      <feOffset
+         dx="4"
+         dy="8"
+         id="feOffset11" />
+      <feGaussianBlur
+         stdDeviation="8"
+         id="feGaussianBlur11" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0"
+         id="feColorMatrix12" />
+      <feBlend
+         mode="normal"
+         in2="BackgroundImageFix_1"
+         result="Shadow_2"
+         id="feBlend12" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="Shadow_2"
+         result="Shape_3"
+         id="feBlend13" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       x="-0.0496325"
+       y="-0.082732878"
+       width="1.1096051"
+       height="1.1999378"
+       id="filter_9">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix_1"
+         id="feFlood13" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
+         in="SourceAlpha"
+         id="feColorMatrix13" />
+      <feOffset
+         dx="4"
+         dy="8"
+         id="feOffset13" />
+      <feGaussianBlur
+         stdDeviation="8"
+         id="feGaussianBlur13" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0"
+         id="feColorMatrix14" />
+      <feBlend
+         mode="normal"
+         in2="BackgroundImageFix_1"
+         result="Shadow_2"
+         id="feBlend14" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="Shadow_2"
+         result="Shape_3"
+         id="feBlend15" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#gradient_7"
+       id="radialGradient20"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(46.468,204.57,-177.36,40.288,102.235,2.358)"
+       cx="0"
+       cy="0"
+       r="1" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#gradient_7"
+       id="radialGradient21"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(46.468,204.57,-177.36,40.288,102.235,2.358)"
+       cx="0"
+       cy="0"
+       r="1" />
+  </defs>
+  <g
+     transform="matrix(0.5,0,0,0.5,188.74999,253.5)"
+     id="g20">
+    <rect
+       style="fill:#ffffff"
+       id="rect21"
+       width="1098.4451"
+       height="1140.2656"
+       x="-200.57069"
+       y="-81.935265"
+       transform="matrix(2,0,0,2,-377.49998,-507)"
+       inkscape:label="background" />
+    <path
+       d="m 637,0 c 38.665,0 70,31.3348 70,70 v 782 c 0,38.665 -31.335,70 -70,70 H 70 C 31.3348,922 0,890.665 0,852 V 70 C 0,31.3348 31.3348,0 70,0 Z"
+       fill="url(#gradient_1)"
+       filter="url(#filter_2)"
+       transform="translate(0,60)"
+       id="path15"
+       style="fill:url(#gradient_1)" />
+    <path
+       d="M 186.737,9.50098 C 186.687,-1.45662 42.22,-6.87489 18.2366,15.5012 -5.74685,37.8773 -0.733427,52.4304 3.73558,53.501 8.2046,54.5716 8.69271,42.7029 32.736,28.5011 56.7795,14.2993 186.788,20.4586 186.737,9.50098 Z"
+       fill="#b69ef2"
+       fill-rule="evenodd"
+       fill-opacity="0.498"
+       transform="translate(14,64)"
+       id="path16" />
+    <path
+       d="m 210,0 c 19.333,0 35,15.6674 35,35 v 188 c 0,19.333 -15.667,35 -35,35 H 35 C 15.6674,258 0,242.333 0,223 V 35 C 0,15.6674 15.6674,0 35,0 Z"
+       fill="url(#gradient_3)"
+       filter="url(#filter_4)"
+       transform="translate(231)"
+       id="path17"
+       style="fill:url(#gradient_3)" />
+    <path
+       d="M 0,50 C 0,22.3858 22.3858,0 50,0 77.6142,0 100,22.3858 100,50 100,77.6142 77.6142,100 50,100 22.3858,100 0,77.6142 0,50 Z"
+       fill="url(#gradient_5)"
+       fill-rule="evenodd"
+       filter="url(#filter_6)"
+       transform="translate(303,79)"
+       id="path18"
+       style="fill:url(#gradient_5)" />
+    <path
+       d="M 0,105.5 C 0,47.2339 47.9055,0 107,0 166.094,0 214,47.2339 214,105.5 214,163.766 166.094,211 107,211 47.9055,211 0,163.766 0,105.5 Z"
+       fill="url(#gradient_7)"
+       fill-rule="evenodd"
+       filter="url(#filter_8)"
+       transform="translate(246,325)"
+       id="path19"
+       style="fill:url(#radialGradient20)" />
+    <path
+       d="m 375.524,128.134 c 9.29,31.096 18.13,74.332 3.689,85.884 C 345.696,237.476 49.3466,240.655 7.39658,208.063 -5.75194,196.73 0.452499,152.538 11.8295,121.129 45.7781,31.2109 108.981,-0.982056 192.809,0.0227051 275.295,0.739746 340.287,30.0912 375.524,128.134 Z"
+       fill="url(#gradient_7)"
+       fill-rule="evenodd"
+       filter="url(#filter_9)"
+       transform="translate(160.192,590.407)"
+       id="path20"
+       style="fill:url(#radialGradient21)" />
+  </g>
+</svg>

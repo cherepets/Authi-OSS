@@ -1,0 +1,142 @@
+<UserControl
+    x:Class="Authi.App.WinUI.UI.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Authi.App.WinUI.Controls"
+    xmlns:l10n="using:Authi.App.Logic.Localization">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <controls:ContentViewHeader
+            x:Name="Header"
+            Title="{x:Bind l10n:Settings.PageTitle}"
+            VerticalAlignment="Top"
+            CloseRequested="OnCloseRequested" />
+
+        <ScrollView Grid.Row="1" IsEnabled="{x:Bind ViewModel.IsLoading, Converter={StaticResource Inverse}, Mode=OneWay}">
+            <StackPanel Padding="26,8,26,26" Spacing="24">
+                <!--  Backup  -->
+                <StackPanel Spacing="8">
+                    <TextBlock Style="{ThemeResource BodyStrongTextBlockStyle}" Text="{x:Bind l10n:Settings.Backup}" />
+                    <StackPanel
+                        Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        BorderBrush="{ThemeResource ControlElevationBorderBrush}"
+                        CornerRadius="{ThemeResource ControlCornerRadius}">
+                        <controls:SettingsSectionButton
+                            Title="{x:Bind l10n:Settings.BackupImportButtonTitle}"
+                            Caption="{x:Bind l10n:Settings.BackupImportButtonCaption}"
+                            Click="{x:Bind ViewModel.Import}"
+                            Icon="&#xE8E5;" />
+                        <NavigationViewItemSeparator />
+                        <controls:SettingsSectionButton
+                            Title="{x:Bind l10n:Settings.BackupExportButtonTitle}"
+                            Caption="{x:Bind l10n:Settings.BackupExportButtonCaption}"
+                            Click="{x:Bind ViewModel.Export}"
+                            Icon="&#xE78C;" />
+                    </StackPanel>
+                </StackPanel>
+
+                <!--  CloudSync  -->
+                <StackPanel Spacing="8">
+                    <TextBlock Style="{ThemeResource BodyStrongTextBlockStyle}" Text="{x:Bind l10n:Settings.CloudSync}" />
+                    <StackPanel
+                        Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        BorderBrush="{ThemeResource ControlElevationBorderBrush}"
+                        CornerRadius="{ThemeResource ControlCornerRadius}">
+                        <Grid Padding="16">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <FontIcon Glyph="&#xE895;" />
+                            <TextBlock
+                                Grid.Column="1"
+                                Margin="16,0,16,1"
+                                VerticalAlignment="Center"
+                                Style="{ThemeResource BodyTextBlockStyle}"
+                                Text="{x:Bind l10n:Settings.CloudSyncSwitchCaption}" />
+                            <ToggleSwitch
+                                x:Name="UISyncEnabledSwitch"
+                                Grid.Column="2"
+                                Height="32"
+                                MinWidth="0"
+                                MinHeight="0"
+                                MaxWidth="40"
+                                IsOn="{x:Bind ViewModel.IsUISyncEnabled, Mode=TwoWay}"
+                                OffContent=""
+                                OnContent=""
+                                Toggled="OnUISyncEnabledSwitchToggled" />
+                        </Grid>
+
+                        <!--  CloudSync On  -->
+                        <StackPanel Visibility="{x:Bind ViewModel.SyncState, ConverterParameter='On', Converter={StaticResource EnumToVisibility}, Mode=OneWay}">
+                            <NavigationViewItemSeparator />
+                            <controls:SettingsSectionButton
+                                Title="{x:Bind l10n:Settings.CloudSyncShowQrButtonTitle}"
+                                Caption="{x:Bind l10n:Settings.CloudSyncShowQrButtonCaption}"
+                                Click="OnShowQR"
+                                Icon="&#xED14;" />
+                            <NavigationViewItemSeparator />
+                            <controls:SettingsSectionButton
+                                Title="{x:Bind l10n:Settings.CloudSyncCopyButtonTitle}"
+                                Caption="{x:Bind l10n:Settings.CloudSyncCopyButtonCaption}"
+                                Click="{x:Bind ViewModel.CopySyncCode}"
+                                Icon="&#xE8C8;" />
+                        </StackPanel>
+
+                        <!--  CloudSync SetUp  -->
+                        <StackPanel Visibility="{x:Bind ViewModel.SyncState, ConverterParameter='SetUp', Converter={StaticResource EnumToVisibility}, Mode=OneWay}">
+                            <NavigationViewItemSeparator />
+                            <controls:SettingsSectionButton
+                                Title="{x:Bind l10n:Settings.CloudSyncDownloadButtonTitle}"
+                                Caption="{x:Bind l10n:Settings.CloudSyncDownloadButtonCaption}"
+                                Click="{x:Bind ViewModel.Download}"
+                                Icon="&#xEBD3;" />
+                            <NavigationViewItemSeparator />
+                            <controls:SettingsSectionButton
+                                Title="{x:Bind l10n:Settings.CloudSyncUploadButtonTitle}"
+                                Caption="{x:Bind l10n:Settings.CloudSyncUploadButtonCaption}"
+                                Click="{x:Bind ViewModel.Upload}"
+                                Icon="&#xE898;" />
+                        </StackPanel>
+
+                        <!--  CloudSync Download  -->
+                        <StackPanel Visibility="{x:Bind ViewModel.SyncState, ConverterParameter='Download', Converter={StaticResource EnumToVisibility}, Mode=OneWay}">
+                            <NavigationViewItemSeparator />
+                            <controls:SettingsSectionButton
+                                Title="{x:Bind l10n:Settings.CloudSyncScanQrButtonTitle}"
+                                Caption="{x:Bind l10n:Settings.CloudSyncScanQrButtonCaption}"
+                                Click="OnScanQR"
+                                Icon="&#xED14;" />
+                            <NavigationViewItemSeparator />
+                            <controls:SettingsSectionButton
+                                Title="{x:Bind l10n:Settings.CloudSyncPasteButtonTitle}"
+                                Caption="{x:Bind l10n:Settings.CloudSyncPasteButtonCaption}"
+                                Click="{x:Bind ViewModel.PasteSyncCode}"
+                                Icon="&#xE77F;" />
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+                <!--  Get app  -->
+                <StackPanel Spacing="8">
+                    <TextBlock Style="{ThemeResource BodyStrongTextBlockStyle}" Text="{x:Bind l10n:Settings.GetApp}" />
+                    <StackPanel
+                        Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        BorderBrush="{ThemeResource ControlElevationBorderBrush}"
+                        CornerRadius="{ThemeResource ControlCornerRadius}">
+                        <controls:SettingsSectionButton
+                            Title="{x:Bind l10n:Settings.GetAppLinkTitle}"
+                            Caption="{x:Bind l10n:Settings.GetAppLinkCaption}"
+                            Click="{x:Bind ViewModel.GetApp}"
+                            Icon="&#xE8EA;" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollView>
+    </Grid>
+</UserControl>

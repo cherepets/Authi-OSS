@@ -1,0 +1,32 @@
+﻿<div id="mainPageRoot">
+    <div id="mainPageProgressBarWrapper">
+        <div id="mainPageProgressBar"></div>
+    </div>
+
+    <div class="header">
+        <div class="tabbar-left">
+            <span id="mainPageTitle" class="page-title"></span>
+        </div>
+        <div class="tabbar-right">
+            <a id="mainPageSettingsLink" class="icon-button" title="Settings">
+                <img id="mainPageSettingsIcon" src="../images/settings.svg" class="icon" alt="settings.svg" />
+            </a>
+        </div>
+    </div>
+
+    <div id="mainPageContent" class="main-content">
+        <div id="mainPageNotConfiguredPopup" class="fullview-popup">
+            <p>The extension is not configured.</p>
+            <button id="mainPageSettingsButton" class="accent-button" type="button">Configure</button>
+        </div>
+        <div id="mainPageErrorPopup" class="fullview-popup">
+            <p>Could not load data.</p>
+            <button id="mainPageRetryButton" class="accent-button" type="button">Try again</button>
+        </div>
+        <ul id="mainPageCredentialsView" />
+    </div>
+
+    <div class="notification-container">
+        <p id="mainPageCopyNotification">Copied to clipboard.</p>
+    </div>
+</div>

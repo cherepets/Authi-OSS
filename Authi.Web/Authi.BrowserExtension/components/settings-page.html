@@ -1,0 +1,34 @@
+﻿<div id="settingsPageRoot">
+    <div class="header">
+        <div class="tabbar-left">
+            <span id="settingsPageTitle" class="page-title"></span>
+        </div>
+        <div class="tabbar-right">
+            <a id="settingsPageCloseLink" class="icon-button" title="Close">
+                <img id="settingsPageCloseIcon" src="../images/close.svg" class="icon" alt="close.svg" />
+            </a>
+        </div>
+    </div>
+
+    <div id="settingsPageContent" class="main-content">
+        <!-- Cloud sync -->
+        <div class="flex-justify">
+            <h3 id="settingsPageCloudSyncHeader"></h3>
+            <label class="toggle right-aligned">
+                <input id="settingsPageCloudSyncToggle" type="checkbox" disabled />
+                <span class="slider" />
+            </label>
+        </div>
+        <button id="settingsPageCloudSyncPasteButton" class="accent-button width-fill" type="button"></button>
+        <span id="settingsPageCloudSyncPasteButtonLabel" class="caption-label"></span>
+
+        <!-- Offline backup -->
+        <h3 id="settingsPageBackupHeader"></h3>
+        <button id="settingsPageBackupImportButton" class="accent-button width-fill" type="button"></button>
+        <span id="settingsPageBackupImportButtonLabel" class="caption-label"></span>
+    </div>
+
+    <div class="footer">
+        <p id="settingsPageGetAppContent"></p>
+    </div>
+</div>

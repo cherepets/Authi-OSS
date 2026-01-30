@@ -1,0 +1,32 @@
+<ContentPage
+    x:Class="Authi.App.Maui.UI.DemoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ui="using:Authi.App.Maui.UI">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <BoxView Grid.Column="0" BackgroundColor="Black" />
+        <BoxView Grid.Column="1" BackgroundColor="White" />
+        <ScrollView Grid.ColumnSpan="2" Margin="0,64,0,0">
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding Colors}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="ui:DemoColor">
+                        <Grid>
+                            <Border
+                                BackgroundColor="{Binding Color}"
+                                Stroke="Transparent"
+                                StrokeThickness="0" />
+                            <Label
+                                Margin="12"
+                                Text="{Binding Name}"
+                                TextColor="{Binding Foreground}" />
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

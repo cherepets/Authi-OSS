@@ -1,0 +1,219 @@
+﻿<ContentView
+    x:Class="Authi.App.Maui.UI.SettingsView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="using:Authi.App.Maui.Controls"
+    xmlns:l10n="clr-namespace:Authi.App.Logic.Localization;assembly=Authi.App.Logic"
+    xmlns:viewModels="clr-namespace:Authi.App.Logic.ViewModels;assembly=Authi.App.Logic"
+    x:DataType="viewModels:SettingsViewModel">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <controls:ContentViewHeader
+            x:Name="Header"
+            Title="{x:Static l10n:Settings.PageTitle}"
+            Close="OnClose" />
+
+        <ScrollView Grid.Row="1" IsEnabled="{Binding IsLoading, Converter={StaticResource Inverse}}">
+            <VerticalStackLayout Margin="24,8,24,24">
+
+                <!--  Backup  -->
+                <Label
+                    Margin="0,8"
+                    Style="{StaticResource SubtitleLabelStyle}"
+                    Text="{x:Static l10n:Settings.Backup}"
+                    VerticalOptions="Center" />
+                <Grid ColumnSpacing="16" RowSpacing="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Button
+                        Grid.Column="0"
+                        Clicked="OnImport"
+                        Text="{x:Static l10n:Settings.BackupImportButtonTitle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource CaptionLabelStyle}"
+                        Text="{x:Static l10n:Settings.BackupImportButtonCaption}" />
+                    <Button
+                        Grid.Column="1"
+                        Clicked="OnExport"
+                        Text="{x:Static l10n:Settings.BackupExportButtonTitle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource CaptionLabelStyle}"
+                        Text="{x:Static l10n:Settings.BackupExportButtonCaption}" />
+                </Grid>
+
+                <!--  Cloud sync  -->
+                <Label
+                    Margin="0,24,0,0"
+                    Style="{StaticResource SubtitleLabelStyle}"
+                    Text="{x:Static l10n:Settings.CloudSync}"
+                    VerticalOptions="Center" />
+                <Grid Margin="0,0,0,8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Style="{StaticResource BodyLargeLabelStyle}"
+                        Text="{x:Static l10n:Settings.CloudSyncSwitchCaption}"
+                        VerticalOptions="Center" />
+                    <Switch
+                        Grid.Column="1"
+                        HorizontalOptions="End"
+                        IsToggled="{Binding IsUISyncEnabled, Mode=TwoWay}"
+                        Toggled="OnUISyncEnabledSwitchToggled"
+                        VerticalOptions="Center" />
+                </Grid>
+
+                <!--  On  -->
+                <controls:AniGrid
+                    ColumnSpacing="16"
+                    FromDirection="Top"
+                    IsVisible="{Binding SyncState, Converter={StaticResource EnumToBool}, Mode=OneWay, ConverterParameter='On'}"
+                    RowSpacing="8">
+                    <controls:AniGrid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </controls:AniGrid.ColumnDefinitions>
+                    <controls:AniGrid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </controls:AniGrid.RowDefinitions>
+                    <Button
+                        Grid.Column="0"
+                        Clicked="OnShowQR"
+                        Text="{x:Static l10n:Settings.CloudSyncShowQrButtonTitle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource CaptionLabelStyle}"
+                        Text="{x:Static l10n:Settings.CloudSyncShowQrButtonCaption}" />
+                    <Button
+                        Grid.Column="1"
+                        Clicked="OnCopySyncCode"
+                        Text="{x:Static l10n:Settings.CloudSyncCopyButtonTitle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource CaptionLabelStyle}"
+                        Text="{x:Static l10n:Settings.CloudSyncCopyButtonCaption}" />
+                </controls:AniGrid>
+
+                <!--  SetUp  -->
+                <controls:AniGrid
+                    ColumnSpacing="16"
+                    FromDirection="Top"
+                    IsVisible="{Binding SyncState, Converter={StaticResource EnumToBool}, Mode=OneWay, ConverterParameter='SetUp'}"
+                    RowSpacing="8">
+                    <controls:AniGrid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </controls:AniGrid.ColumnDefinitions>
+                    <controls:AniGrid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </controls:AniGrid.RowDefinitions>
+                    <Button
+                        Grid.Column="0"
+                        Clicked="OnDownload"
+                        Text="{x:Static l10n:Settings.CloudSyncDownloadButtonTitle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource CaptionLabelStyle}"
+                        Text="{x:Static l10n:Settings.CloudSyncDownloadButtonCaption}" />
+                    <Button
+                        Grid.Column="1"
+                        Clicked="OnUpload"
+                        IsEnabled="{Binding IsSynced, Converter={StaticResource Inverse}}"
+                        Text="{x:Static l10n:Settings.CloudSyncUploadButtonTitle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Center"
+                        IsEnabled="{Binding IsSynced, Converter={StaticResource Inverse}}"
+                        Style="{StaticResource CaptionLabelStyle}"
+                        Text="{x:Static l10n:Settings.CloudSyncUploadButtonCaption}" />
+                </controls:AniGrid>
+
+                <!--  Download  -->
+                <controls:AniGrid
+                    ColumnSpacing="16"
+                    FromDirection="Top"
+                    IsVisible="{Binding SyncState, Converter={StaticResource EnumToBool}, Mode=OneWay, ConverterParameter='Download'}"
+                    RowSpacing="8">
+                    <controls:AniGrid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </controls:AniGrid.ColumnDefinitions>
+                    <controls:AniGrid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </controls:AniGrid.RowDefinitions>
+                    <Button
+                        Grid.Column="0"
+                        Clicked="OnScanQR"
+                        Text="{x:Static l10n:Settings.CloudSyncScanQrButtonTitle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource CaptionLabelStyle}"
+                        Text="{x:Static l10n:Settings.CloudSyncScanQrButtonCaption}" />
+                    <Button
+                        Grid.Column="1"
+                        Clicked="OnPasteSyncCode"
+                        Text="{x:Static l10n:Settings.CloudSyncPasteButtonTitle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource CaptionLabelStyle}"
+                        Text="{x:Static l10n:Settings.CloudSyncPasteButtonCaption}" />
+                </controls:AniGrid>
+
+                <!--  Get app  -->
+                <Label
+                    Margin="0,8"
+                    Style="{StaticResource SubtitleLabelStyle}"
+                    Text="{x:Static l10n:Settings.GetApp}"
+                    VerticalOptions="Center" />
+                <Grid ColumnSpacing="16" RowSpacing="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Style="{StaticResource BodyLargeLabelStyle}"
+                        Text="{x:Static l10n:Settings.GetAppLinkCaption}"
+                        VerticalOptions="Center" />
+                    <Button
+                        Grid.Column="1"
+                        Clicked="OnGetApp"
+                        Text="{x:Static l10n:Settings.GetAppLinkTitle}"
+                        VerticalOptions="Center" />
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentView>
