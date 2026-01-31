@@ -1,0 +1,24 @@
+name: Server Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  run_tests:
+
+    runs-on: ubuntu-latest
+    name: "Run Server Tests"
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.0.x
+
+    - name: Run Tests
+      run: dotnet test Authi.Server/Authi.Server.Test/Authi.Server.Test.csproj --verbosity minimal

@@ -23,7 +23,7 @@
 	</ItemGroup>
 
 	<Target Name="PreBuild" BeforeTargets="PreBuildEvent" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<Exec Command="dotnet run --project $(SolutionDir)Tools\Authi.Localizer\Authi.Localizer.csproj $(SolutionDir)Authi.Web\Authi.BrowserExtension\localization\en.json $(ProjectDir)Localization.cs" />
+		<Exec Command="dotnet run --project ../../Tools/Authi.Localizer/Authi.Localizer.csproj ../../Authi.Web/Authi.BrowserExtension/localization/en.json Localization.cs" />
 	</Target>
 
 </Project>
