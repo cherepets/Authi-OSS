@@ -44,7 +44,8 @@ CREATE TABLE `sync` (
 -- Indexes for table `client`
 --
 ALTER TABLE `client`
-  ADD PRIMARY KEY (`ClientId`);
+  ADD PRIMARY KEY (`ClientId`),
+  ADD KEY `idx_client_data_id` (`DataId`);
 
 --
 -- Indexes for table `data`
@@ -56,7 +57,24 @@ ALTER TABLE `data`
 -- Indexes for table `sync`
 --
 ALTER TABLE `sync`
-  ADD PRIMARY KEY (`SyncId`);
+  ADD PRIMARY KEY (`SyncId`),
+  ADD KEY `idx_sync_data_id` (`DataId`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `client`
+--
+ALTER TABLE `client`
+  ADD CONSTRAINT `fk_client_data` FOREIGN KEY (`DataId`) REFERENCES `data` (`DataId`);
+
+--
+-- Constraints for table `sync`
+--
+ALTER TABLE `sync`
+  ADD CONSTRAINT `fk_sync_data` FOREIGN KEY (`DataId`) REFERENCES `data` (`DataId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
