@@ -40,14 +40,28 @@ namespace Authi.App.WinUI.Controls
             Loaded -= OnLoaded;
             Unloaded += OnUnloaded;
 
-            await InitializeCaptureAsync();
+            try
+            {
+                await InitializeCaptureAsync();
+            }
+            catch
+            {
+                // probably no access or no camera
+            }
         }
 
         private async void OnUnloaded(object sender, RoutedEventArgs e)
         {
             Unloaded -= OnUnloaded;
 
-            await TerminateCaptureAsync();
+            try
+            {
+                await TerminateCaptureAsync();
+            }
+            catch
+            {
+                // probably no access or no camera
+            }
         }
 
         private async Task InitializeCaptureAsync()
@@ -78,6 +92,8 @@ namespace Authi.App.WinUI.Controls
                 SourceGroup = sourceGroup,
                 SharingMode = MediaCaptureSharingMode.SharedReadOnly,
                 MemoryPreference = MediaCaptureMemoryPreference.Cpu, // to ensure we get SoftwareBitmaps
+                StreamingCaptureMode = StreamingCaptureMode.Video,
+                AudioDeviceId = null,
             });
 
             // initialize source
