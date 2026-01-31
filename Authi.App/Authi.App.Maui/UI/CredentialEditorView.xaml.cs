@@ -30,7 +30,7 @@ public partial class CredentialEditorView : IAdaptiveView
     {
         QrScanButton.Margin = new Thickness(24, 24, 24, 24 + MauiApp.Current.SystemInsets.Bottom);
         SaveButton.Margin = new Thickness(24, 24, 24, 24 + MauiApp.Current.SystemInsets.Bottom);
-        CredentialsEditorView.Padding = new Thickness(0, 0, 0, QrScanButton.HeightRequest + QrToggleButton.Margin.VerticalThickness);
+        CredentialsEditorView.Padding = new Thickness(0, 0, 0, QrScanButton.HeightRequest + QrScanButton.Margin.VerticalThickness);
         Header.SetCompactSize(isCompact);
         SaveButton.IsVisible = !isCompact;
         CompactSaveButton.IsVisible = isCompact;
