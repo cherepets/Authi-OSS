@@ -1,4 +1,4 @@
-name: Authi.App.Test
+name: App Tests
 
 on:
   push:
@@ -7,9 +7,10 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  run_tests:
 
     runs-on: ubuntu-latest
+    name: "Run App Tests"
 
     steps:
     - uses: actions/checkout@v4
@@ -19,5 +20,5 @@ jobs:
       with:
         dotnet-version: 10.0.x
 
-    - name: Run Test
+    - name: Run Tests
       run: dotnet test Authi.App/Authi.App.Test/Authi.App.Test.csproj --verbosity minimal
