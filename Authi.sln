@@ -58,6 +58,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authi.App.WinUI", "Authi.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authi.App.Logic", "Authi.App\Authi.App.Logic\Authi.App.Logic.csproj", "{DA58264F-28EE-4CA9-A9C5-AE80490F7BB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authi.BrowserPack", "Tools\Authi.BrowserPack\Authi.BrowserPack.csproj", "{006B66C2-0882-46B1-A693-106E887E7C9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -120,6 +122,10 @@ Global
 		{DA58264F-28EE-4CA9-A9C5-AE80490F7BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA58264F-28EE-4CA9-A9C5-AE80490F7BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA58264F-28EE-4CA9-A9C5-AE80490F7BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006B66C2-0882-46B1-A693-106E887E7C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006B66C2-0882-46B1-A693-106E887E7C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006B66C2-0882-46B1-A693-106E887E7C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006B66C2-0882-46B1-A693-106E887E7C9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -138,6 +144,7 @@ Global
 		{382E3112-C4AB-469E-A26A-AF2E7E90C93A} = {18AB49D6-0696-462F-896C-A78B6A4F0792}
 		{06672FC0-889C-4B87-AD4B-CA57270EB41D} = {EC59B354-7BBA-47A6-BD09-5FE859858EDD}
 		{DA58264F-28EE-4CA9-A9C5-AE80490F7BB4} = {EC59B354-7BBA-47A6-BD09-5FE859858EDD}
+		{006B66C2-0882-46B1-A693-106E887E7C9A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AE82580A-9D4B-4C89-ABEE-8E65BED45CAE}
