@@ -62,20 +62,20 @@ namespace Authi.Server.ApiVersions
 
             try
             {
-                Services.ClientRepository.Create(client);
-            }
-            catch
-            {
-                return new ErrorResponse<InitResponse>(ErrorMessages.CantCreateClient);
-            }
-
-            try
-            {
                 Services.DataRepository.Create(data);
             }
             catch
             {
                 return new ErrorResponse<InitResponse>(ErrorMessages.CantCreateData);
+            }
+
+            try
+            {
+                Services.ClientRepository.Create(client);
+            }
+            catch
+            {
+                return new ErrorResponse<InitResponse>(ErrorMessages.CantCreateClient);
             }
 
             var responsePayload = new InitResponse.Payload

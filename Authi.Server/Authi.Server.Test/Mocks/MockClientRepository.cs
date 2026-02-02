@@ -1,4 +1,5 @@
-﻿using Authi.Server.Models;
+﻿using Authi.Common.Services;
+using Authi.Server.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,11 @@ namespace Authi.Server.Services
 
         public void Create(Client client)
         {
+            if (ServiceProvider.Current.Get<IDataRepository>().Read(client.DataId) is null)
+            {
+                throw new Exception($"Data with id {client.DataId} not found.");
+            }
+
             _storage.Add(client.ClientId, client);
         }
 

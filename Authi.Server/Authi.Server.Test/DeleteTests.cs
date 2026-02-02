@@ -48,8 +48,8 @@ namespace Authi.Server.Test
                 }
             };
 
-            ClientRepository.Create(dbClient);
             DataRepository.Create(dbData);
+            ClientRepository.Create(dbClient);
 
             var requestPayload = new DeleteRequest.Payload
             {
@@ -171,8 +171,8 @@ namespace Authi.Server.Test
                 }
             };
 
-            ClientRepository.Create(dbClient);
             DataRepository.Create(dbData);
+            ClientRepository.Create(dbClient);
 
             var requestPayload = new DeleteRequest.Payload
             {
@@ -235,8 +235,8 @@ namespace Authi.Server.Test
                 }
             };
 
-            ClientRepository.Create(dbClient);
             DataRepository.Create(dbData);
+            ClientRepository.Create(dbClient);
 
             var requestPayload = new DeleteRequest.Payload
             {

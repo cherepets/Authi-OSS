@@ -49,8 +49,8 @@ namespace Authi.Server.Test
                 }
             };
 
-            ClientRepository.Create(dbClient);
             DataRepository.Create(dbData);
+            ClientRepository.Create(dbClient);
 
             var requestMessage = "message";
 
@@ -180,8 +180,8 @@ namespace Authi.Server.Test
                 }
             };
 
-            ClientRepository.Create(dbClient);
             DataRepository.Create(dbData);
+            ClientRepository.Create(dbClient);
 
             var requestMessage = "message";
 
@@ -247,8 +247,8 @@ namespace Authi.Server.Test
                 }
             };
 
-            ClientRepository.Create(dbClient);
             DataRepository.Create(dbData);
+            ClientRepository.Create(dbClient);
 
             var requestMessage = "message";
 

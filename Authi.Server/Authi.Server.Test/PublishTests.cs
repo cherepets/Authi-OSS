@@ -48,8 +48,8 @@ namespace Authi.Server.Test
                 }
             };
 
-            ClientRepository.Create(dbClient);
             DataRepository.Create(dbData);
+            ClientRepository.Create(dbClient);
 
             var oneTimeKeyPair = Services.Crypto.GenerateX25519KeyPair();
             var requestPayload = new PublishRequest.Payload
@@ -182,8 +182,8 @@ namespace Authi.Server.Test
                 }
             };
 
-            ClientRepository.Create(dbClient);
             DataRepository.Create(dbData);
+            ClientRepository.Create(dbClient);
 
             var oneTimeKeyPair = Services.Crypto.GenerateX25519KeyPair();
             var requestPayload = new PublishRequest.Payload
@@ -248,8 +248,8 @@ namespace Authi.Server.Test
                 }
             };
 
-            ClientRepository.Create(dbClient);
             DataRepository.Create(dbData);
+            ClientRepository.Create(dbClient);
 
             var oneTimeKeyPair = Services.Crypto.GenerateX25519KeyPair();
             var requestPayload = new PublishRequest.Payload
