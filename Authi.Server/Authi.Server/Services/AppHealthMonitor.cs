@@ -24,7 +24,7 @@ namespace Authi.Server.Services
     {
         internal static string LogFilePath => Path.Combine(LogFolderPath, "eventLog.jsonl");
         internal static string LogFolderPath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logs");
-        internal const int MaxEvents = 10;
+        internal const int MaxEvents = 100;
 
         private readonly ConcurrentQueue<AppHealthEvent> _events = [];
 

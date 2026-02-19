@@ -15,8 +15,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\health.html" />
-	  <EmbeddedResource Include="Resources\health.html" />
+	  <EmbeddedResource Include="Resources\health-login.html" />
+	  <EmbeddedResource Include="Resources\health-dashboard.html" />
 	</ItemGroup>
 
 	<ItemGroup>

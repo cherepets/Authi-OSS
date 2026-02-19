@@ -63,10 +63,12 @@ namespace Authi.Server.Services
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            var healthMonitor = ServiceProvider.Current.Get<IAppHealthMonitor>();
             /* OMITTED IN OSS BUILD */
-            optionsBuilder.UseMySql(
-                connectionString: "",
-                serverVersion: new MySqlServerVersion(""));
+            optionsBuilder
+                .UseMySql(
+                    connectionString: "",
+                    serverVersion: new MySqlServerVersion(""))
                 .OnError(healthMonitor.ReportEvent);
         }
 

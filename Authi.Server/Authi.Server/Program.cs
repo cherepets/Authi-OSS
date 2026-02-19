@@ -28,9 +28,9 @@ namespace Authi.Server
                 .OnApplicationStopping(healthMonitor.Flush);
 
             app.MapApiVersion(new ApiV1());
-            app.MapApiVersion(new HealthApi());
 
 #if DEBUG
+            app.MapApiVersion(new HealthApi());
             app.MapApiVersion(new DebugApi());
 #endif
 
