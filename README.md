@@ -43,7 +43,7 @@ The second client scans a qr-code (or obtains text code in any way the user pref
 
 The server again generates a key pair and the exchange keys similar to how it happens during **Init**.
 
-                Init {comm key 1}              Consume {comm key 2}
+                Init {comm key 1}             Consume {comm key 2}
     Client 1  <------------------->  Server  <-------------------->  Client 2
        |      Publish {one time key}                                    ˄
        |                                                                |
