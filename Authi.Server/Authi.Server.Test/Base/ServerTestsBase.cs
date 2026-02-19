@@ -25,7 +25,7 @@ namespace Authi.Server.Test
             ServicesMock.Override<ISyncRepository>(SyncRepository);
         }
 
-        protected (X25519KeyPair, X25519KeyPair) ExchangePublicKeys(X25519KeyPair clientKeyPair, X25519KeyPair serverKeyPair)
+        protected static (X25519KeyPair, X25519KeyPair) ExchangePublicKeys(X25519KeyPair clientKeyPair, X25519KeyPair serverKeyPair)
         {
             return (
                 new X25519KeyPair(

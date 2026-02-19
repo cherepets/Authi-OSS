@@ -1,8 +1,9 @@
 using Authi.Common.Services;
 using Authi.Server.ApiVersions;
 using Authi.Server.Extensions;
+using Authi.Server.Services;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+using ServiceProvider = Authi.Common.Services.ServiceProvider;
 
 namespace Authi.Server
 {
@@ -10,28 +11,26 @@ namespace Authi.Server
     {
         private static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
-
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy(name: "AllowOrigin",
-                    policy => policy
-                        .AllowAnyOrigin()
-                        .AllowAnyHeader()
-                        .AllowAnyMethod());
-            });
-
-            var app = builder.Build();
-            app.UseDeveloperExceptionPage();
-            app.UseCors("AllowOrigin");
-
             ServiceLocator.Init(
                 typeof(ServiceLocator).Assembly,    // Authi.Common
                 typeof(Program).Assembly);          // Authi.Server
 
+            var healthMonitor = ServiceProvider.Current.Get<IAppHealthMonitor>();
+
+            var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services
+                .NoCors();                          // The API is never used by browser clients
+
+            var app = builder.Build()
+                .NoCors()
+                .OnException(healthMonitor.ReportEvent)
+                .OnApplicationStopping(healthMonitor.Flush);
+
             app.MapApiVersion(new ApiV1());
 
 #if DEBUG
+            app.MapApiVersion(new HealthApi());
             app.MapApiVersion(new DebugApi());
 #endif
 

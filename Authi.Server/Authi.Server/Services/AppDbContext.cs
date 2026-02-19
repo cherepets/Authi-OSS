@@ -1,5 +1,6 @@
 ﻿using Authi.Common.Extensions;
 using Authi.Common.Services;
+using Authi.Server.Extensions;
 using Authi.Server.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
@@ -9,7 +10,7 @@ using System.Linq;
 namespace Authi.Server.Services
 {
     [Service]
-    public interface IAppDbContext
+    internal interface IAppDbContext
     {
         TEntity? Find<TEntity>(Guid id) where TEntity : class;
         TEntity[] Find<TEntity>(Func<TEntity, bool> predicate) where TEntity : class;
@@ -19,7 +20,7 @@ namespace Authi.Server.Services
         void Delete<TEntity>(TEntity[] entities) where TEntity : class;
     }
 
-    public class AppDbContext : DbContext, IAppDbContext
+    internal class AppDbContext : DbContext, IAppDbContext
     {
         public AppDbContext()
         {
@@ -62,10 +63,13 @@ namespace Authi.Server.Services
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            var healthMonitor = ServiceProvider.Current.Get<IAppHealthMonitor>();
             /* OMITTED IN OSS BUILD */
-            optionsBuilder.UseMySql(
-                connectionString: "",
-                serverVersion: new MySqlServerVersion(""));
+            optionsBuilder
+                .UseMySql(
+                    connectionString: "",
+                    serverVersion: new MySqlServerVersion(""))
+                .OnError(healthMonitor.ReportEvent);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

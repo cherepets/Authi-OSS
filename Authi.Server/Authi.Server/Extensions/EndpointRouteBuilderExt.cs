@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Routing;
 
 namespace Authi.Server.Extensions
 {
-    public static class EndpointRouteBuilderExt
+    internal static class EndpointRouteBuilderExt
     {
-        public static void MapApiVersion(this IEndpointRouteBuilder app, ApiVersionBase apiVersion)
+        public static T MapApiVersion<T>(this T builder, ApiVersionBase apiVersion) where T : IEndpointRouteBuilder
         {
-            apiVersion.ConfigureRoutes(app);
+            apiVersion.ConfigureRoutes(builder);
+            return builder;
         }
     }
 }
