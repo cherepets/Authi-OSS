@@ -15,6 +15,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\health.html" />
+	  <EmbeddedResource Include="Resources\health.html" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<InternalsVisibleTo Include="Authi.Server.Test" />
 	</ItemGroup>
 
